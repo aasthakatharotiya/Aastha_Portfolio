@@ -194,14 +194,14 @@ export default function Portfolio() {
     // ];
 
     const skills = [
-        { name: 'HTML', percentage: 90, backgroundImage: 'html_bg.png' },
-        { name: 'CSS', percentage: 96, backgroundImage: 'css_bg.png' },
-        { name: 'jQuery', percentage: 80, backgroundImage: 'jquery_bg.png' },
-        { name: 'JavaScript', percentage: 85, backgroundImage: 'Javascript_bg.png' },
-        { name: 'React JS', percentage: 90, backgroundImage: 'reactjs_bg.png' },
-        { name: 'Bootstrap', percentage: 100, backgroundImage: 'bootstrap_bg.png' },
-        { name: 'DSA', percentage: 80, backgroundImage: 'dsa_bg.png' },
-        { name: 'PHP', percentage: 50, backgroundImage: 'php_bg.png' },
+        { name: 'HTML', percentage: 90},
+        { name: 'CSS', percentage: 96},
+        { name: 'jQuery', percentage: 80},
+        { name: 'JavaScript', percentage: 85},
+        { name: 'React JS', percentage: 90},
+        { name: 'Bootstrap', percentage: 100},
+        { name: 'DSA', percentage: 80},
+        { name: 'PHP', percentage: 50},
     ];
 
 

@@ -1,5 +1,7 @@
-/* :root {
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -9,7 +11,91 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-} */
+}
+
+
+.contentStyles {
+  position: fixed;
+  right: 0%;
+  top: 0%;
+  text-align: left;
+  width: 80%;
+  /* padding-top: 40px; */
+}
+
+.resume_img {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 100%;
+    /* width: 100%; */
+  }
+}
+
+.resume_btn {
+  position: fixed;
+  right: 0%;
+  top: 0%;
+  margin: 20px;
+  padding: 0px 20px;
+  height: 50px;
+  background-color: rgb(224, 209, 180);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 19px;
+  /* letter-spacing: 1px; */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.resume_btn:hover {
+  border: 2px solid rgb(191, 156, 116);
+  color: rgb(191, 156, 116);
+  background: none;
+}
+
+.nav_flex {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .nav_btn {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+
+    img {
+      height: 140%;
+      width: 140%;
+    }
+  }
+
+  .nav_btn:hover img {
+    transform: scale(1.1);
+    transition: 1s;
+  }
+}
+
+
+
+
+
+
+
 
 * {
   margin: 0%;
@@ -21,7 +107,7 @@ html {
   scroll-behavior: smooth;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
@@ -41,184 +127,6 @@ button {
   width: 0%;
 }
 
-header {
-  width: 100%;
-  padding: 10px;
-  position: fixed;
-  top: 0%;
-  z-index: 10000;
-  overflow: hidden;
-
-  .header_div {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .logo {
-      /* border: 2px solid; */
-      width: 15%;
-      height: 50px;
-      /* background-image: url('Logo.png');
-      background-size: 100% 100%;
-      background-position: center; */
-
-      /* img{
-        height: 200%;
-        width: 100%;
-      } */
-
-      h1{
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      }
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      padding-right: 50px;
-
-      a {
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-      }
-
-      a:hover {
-        color: rgb(177, 180, 147);
-        border-bottom: 2px solid rgb(177, 180, 147);
-        transition: 1s;
-      }
-
-      a.active {
-        color: rgb(177, 180, 147);
-        border-bottom: 2px solid rgb(177, 180, 147);
-      }
-
-      button {
-        padding: 0px 20px;
-        height: 50px;
-        background-color: rgb(177, 180, 147);
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-size: 19px;
-        /* letter-spacing: 1px; */
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      }
-
-      button:hover {
-        border: 2px solid rgb(177, 180, 147);
-        color: rgb(177, 180, 147);
-        background: none;
-        transition: 1s;
-      }
-    }
-
-    .menu {
-      display: none;
-    }
-
-    .menu_div {
-      visibility: hidden;
-      position: fixed;
-      right: 0%;
-      top: 0%;
-      width: 0%;
-      height: 100%;
-      transition: 1s ease-in-out;
-      overflow: hidden;
-    }
-  }
-
-  @media screen and (min-width: 400px) and (max-width: 992px) {
-    .header_div {
-      .navbar {
-        display: none;
-      }
-
-      .menu_navbar {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-        margin-top: 50px;
-
-        a {
-          text-decoration: none;
-          color: rgb(177, 180, 147);
-          font-weight: bold;
-        }
-
-        a:hover {
-          color: rgb(177, 180, 147);
-          border-bottom: 2px solid rgb(177, 180, 147);
-        }
-
-        button {
-          height: 50px;
-          padding: 0px 20px;
-          background-color: rgb(177, 180, 147);
-          color: white;
-          border-radius: 5px;
-          border: none;
-          font-weight: bolder;
-          font-size: 17px;
-        }
-
-        button:hover {
-          background-color: rgb(177, 180, 147);
-        }
-      }
-
-      .menu {
-        display: block;
-
-        button {
-          background: none;
-          color: black;
-          border: none;
-          padding-right: 20px;
-          font-size: 30px;
-        }
-      }
-
-      .menu:focus-within+.menu_div {
-        visibility: visible;
-        transition: 1s;
-        width: 40%;
-        height: 100%;
-        position: fixed;
-        right: 0%;
-        top: 0%;
-        background-color: black;
-        z-index: 100;
-        padding: 20px;
-      }
-
-      .cross {
-        width: 100%;
-        text-align: right;
-
-        button {
-          background: none;
-          border: none;
-          color: white;
-          padding-right: 15px;
-          font-size: 30px;
-        }
-      }
-
-      .cross:focus-within .menu_div {
-        transition: 0.5s;
-        width: 0%;
-      }
-    }
-  }
-}
 
 
 .head {
@@ -237,7 +145,7 @@ header {
   overflow: hidden;
 
   .angled_section_color {
-    width: 40%;
+    width: 50%;
     height: 100%;
     background-color: rgb(229, 229, 229);
     clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%);
@@ -246,9 +154,10 @@ header {
     .angled_section {
       width: 96%;
       height: 100%;
-      background-image: url('BG_color.png');
+      background-color: rgb(230, 216, 189);
+      /* background-image: url('BG_color.png');
       background-size: 200% 200%;
-      background-position: center;
+      background-position: center; */
       /* background-color: white; */
       clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%);
       display: flex;
@@ -262,23 +171,24 @@ header {
     /* border: 2px solid; */
     width: 35%;
     position: relative;
-    margin-left: -400px;
+    margin-left: -450px;
     z-index: 100;
     text-align: left;
 
     h3 {
-      color: rgb(177, 180, 147);
+      color: rgb(191,156,116);
       font-size: 25px;
     }
 
     h1 {
+      color: black;
       margin-top: 20px;
       font-size: 50px;
       font-weight: bolder;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
       span {
-        color: rgb(177, 180, 147);
+        color: rgb(191,156,116);
       }
     }
 
@@ -286,7 +196,7 @@ header {
       margin-top: 20px;
       padding: 0px 20px;
       height: 50px;
-      background-color: rgb(177, 180, 147);
+      background-color: rgb(191,156,116);
       color: white;
       border: none;
       border-radius: 5px;
@@ -296,8 +206,8 @@ header {
     }
 
     button:hover {
-      border: 2px solid rgb(177, 180, 147);
-      color: rgb(177, 180, 147);
+      border: 2px solid rgb(191,156,116);
+      color: rgb(191,156,116);
       background: none;
       transition: 1s;
     }
@@ -420,19 +330,20 @@ header {
 
 .counter_main {
   width: 100%;
-  background-color: rgb(248, 249, 250);
+  /* background-color: rgb(248, 249, 250); */
   /* border: 2px solid; */
   overflow: hidden;
 
   .counter_div {
-    width: 80%;
+    width: 100%;
     border-radius: 5px;
-    padding: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
     /* border: 2px solid; */
 
     .count_text {
@@ -466,11 +377,11 @@ header {
           }
 
           h1 {
-            font-size: 35px;
+            font-size: 30px;
           }
 
           h3 {
-            margin-top: 10px;
+            margin-top: 5px;
             color: rgb(177, 180, 147);
             font-weight: bolder;
           }
@@ -494,7 +405,7 @@ header {
           }
 
           h3 {
-            color: black;
+            color: white;
             transition: 1s;
           }
         }
@@ -546,7 +457,8 @@ header {
   overflow: hidden;
 
   .about_div {
-    width: 85%;
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -555,6 +467,7 @@ header {
     .about_img {
       width: 40%;
       height: 660px;
+      height: 100%;
       /* border: 2px solid; */
       /* padding: 10px; */
 
@@ -585,7 +498,7 @@ header {
 
       p {
         margin-top: 20px;
-        color: rgb(112, 110, 110);
+        color: rgb(172, 170, 170);
         line-height: 22px;
         font-size: 17px;
       }
@@ -596,7 +509,7 @@ header {
 
         .about_info_right {
           p {
-            color: black;
+            color: white;
             font-size: 18px;
             font-weight: bold;
           }
@@ -639,11 +552,11 @@ header {
 
           h3 {
             font-size: 20px;
-            color: black;
+            color: white;
           }
         }
 
-        .about_hobby:hover{
+        .about_hobby:hover {
           gap: 0px;
           transition: 1s;
 
@@ -720,21 +633,21 @@ header {
 
 
 .head_main_h3 {
-  padding-top: 40px;
+  padding-top: 10px;
   font-size: 25px;
   color: rgb(177, 180, 147);
 }
 
 .head_main_h1 {
   font-size: 35px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 .head_main_p {
   color: rgb(155, 153, 153);
   font-size: 18px;
   letter-spacing: 1px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 
@@ -742,8 +655,8 @@ header {
 .skill_main {
   /* border: 2px solid; */
   width: 100%;
-  padding-bottom: 40px;
-  background-color: rgb(248, 249, 250);
+  /* padding-bottom: 40px; */
+  /* background-color: rgb(248, 249, 250); */
 
   .technical_skill {
     /* border: 2px solid; */
@@ -799,14 +712,14 @@ header {
 
         .progress-text {
           position: absolute;
-          font-size: 30px;
+          font-size: 40px;
           font-weight: bold;
-          color: #333;
-          /* color: white; */
+          /* color: #333; */
+          color: white;
           z-index: 3;
-          /* text-shadow: 0 0 10px #FFD700,
+          text-shadow: 0 0 10px #FFD700,
             0 0 20px #FFA500,
-            0 0 30px #FF6347; */
+            0 0 30px #FF6347;
         }
       }
 
@@ -820,13 +733,20 @@ header {
 .project_main {
   /* border: 2px solid; */
   width: 100%;
+  height: 100vh;
   padding-bottom: 50px;
+  overflow: scroll;
+  overflow-x: hidden;
 
   .project_div {
     /* border: 2px solid; */
-    width: 90%;
+    width: 100%;
+
+    /* overflow: scroll;
+    overflow-x: hidden; */
 
     .project_head {
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -846,20 +766,23 @@ header {
     }
 
     .project {
+      width: 100%;
       margin-top: 50px;
       /* border: 2px solid; */
       display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 50px;
-      flex-wrap: wrap;
+      /* justify-content: center;
+      align-items: center; */
+      gap: 30px;
+      /* flex-wrap: wrap; */
+      /* overflow: scroll;
+      overflow-x: hidden; */
 
       .project_img {
         background-color: black;
         /* border: 2px solid; */
         overflow: hidden;
         height: 400px;
-        width: 285px;
+        width: 280px;
         position: relative;
 
         img {
@@ -899,7 +822,7 @@ header {
   /* border: 2px solid; */
   width: 100%;
   padding-bottom: 50px;
-  background-color: rgb(248, 249, 250);
+  /* background-color: rgb(248, 249, 250); */
 
 
   .swiper {
@@ -1021,7 +944,7 @@ header {
   .popup-box {
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 60%;
     transform: translate(-50%, -50%);
     background: #fff;
     padding: 20px;
@@ -1078,18 +1001,18 @@ header {
 
 
 .contact_main {
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
 
   .main_form {
     width: 60%;
-    margin-top: 50px;
-    border: 1px solid rgb(209, 206, 206);
-    background: #fff;
+    margin-top: 20px;
+    border: 1px solid rgb(145, 143, 143);
+    /* background: #fff; */
     border-radius: 8px;
     padding: 2rem;
     /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
     text-align: left;
-    color: #333;
+    color: white;
     /* filter: blur(5px); */
 
     .main_info {
@@ -1098,6 +1021,7 @@ header {
       gap: 20px;
       text-align: left;
       margin-top: 20px;
+      background: none;
 
       .left_info {
         width: 50%;
@@ -1139,7 +1063,7 @@ header {
       }
     }
 
-    h3{
+    h3 {
       /* border: 2px solid; */
       height: 40px;
     }
@@ -1156,8 +1080,8 @@ header {
       border-radius: 4px;
       border: 1px solid #b6b4b4;
       transition: all 0.3s;
-      background-color: white;
-      color: black;
+      background: none;
+      color: white;
     }
 
     select {
@@ -1166,7 +1090,7 @@ header {
     }
 
     select option {
-      color: black;
+      color: white;
     }
 
     input[type="text"]:focus,
@@ -1177,6 +1101,8 @@ header {
       outline: none;
       border-color: rgb(126, 129, 104);
       box-shadow: 0 0 8px rgb(126, 129, 104, 0.2);
+      color: black;
+      background-color: rgb(205, 204, 204);
     }
 
 
@@ -1189,142 +1115,3 @@ header {
     }
   }
 }
-
-
-
-
-footer {
-  background-color: rgb(248, 249, 250);
-  padding: 50px 0px;
-
-  .footer_div {
-    width: 80%;
-    display: flex;
-    /* gap: 20px; */
-    text-align: left;
-
-    .footer_left {
-      width: 50%;
-      /* border: 2px solid; */
-      padding-right: 20px;
-
-      h3 {
-        font-size: 23px;
-      }
-
-      p {
-        margin-top: 30px;
-      }
-
-      .footer_connect {
-        display: flex;
-        gap: 20px;
-        margin-top: 20px;
-
-        button {
-          height: 50px;
-          width: 50px;
-          border-radius: 50%;
-          border: none;
-          background-color: rgb(177, 180, 147);
-          color: white;
-          font-size: 20px;
-        }
-
-        button:hover {
-          background: none;
-          border: 2px solid rgb(177, 180, 147);
-          color: rgb(177, 180, 147);
-          transition: 1s;
-        }
-      }
-
-    }
-
-    .footer_right {
-      width: 50%;
-      padding-left: 20px;
-      /* border: 2px solid; */
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-
-      h3 {
-        margin-bottom: 30px;
-        font-size: 23px;
-      }
-
-      p {
-        margin-bottom: 10px;
-      }
-
-      .footer_nav {
-        p {
-          cursor: pointer;
-        }
-
-        p:hover {
-          font-weight: bold;
-          color: rgb(177, 180, 147);
-          margin-left: 20px;
-          transition: 1s;
-        }
-      }
-
-      .footer_info_flex {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 20px;
-
-        p {
-          margin-bottom: 0px;
-        }
-
-        button {
-          height: 50px;
-          width: 50px;
-          border-radius: 50%;
-          border: none;
-          background-color: rgb(177, 180, 147);
-          color: white;
-          font-size: 20px;
-        }
-
-        button:hover {
-          background: none;
-          border: 2px solid rgb(177, 180, 147);
-          color: rgb(177, 180, 147);
-          transition: 1s;
-        }
-      }
-    }
-  }
-
-  @media screen and (min-width: 992px) and (max-width: 1200px) {
-    .footer_div {
-      width: 98%;
-    }
-  }
-
-  @media screen and (min-width: 400px) and (max-width: 992px) {
-    .footer_div {
-      width: 90%;
-      display: flex;
-      flex-direction: column;
-
-      .footer_left {
-        width: 100%;
-        padding-right: 0%;
-      }
-
-      .footer_right {
-        width: 100%;
-        margin-top: 40px;
-        padding-left: 0%;
-      }
-    }
-  }
-}
-
-
