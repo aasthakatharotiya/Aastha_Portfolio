@@ -905,7 +905,7 @@ export default function Portfolio() {
                             <br /><br />
                             <h3>Connect</h3>
                             <div className="footer_connect">
-                                <a href="https://www.instagram.com/?hl=en">
+                                <a href="https://www.instagram.com/aastha_patel_0801/profilecard/?igsh=YW9sZHVsZHIxcDVh">
                                     <button>
                                         <i class="fa-brands fa-instagram"></i>
                                     </button>
@@ -917,13 +917,13 @@ export default function Portfolio() {
                                     </button>
                                 </a>
 
-                                <a href="https://in.linkedin.com/">
+                                <a href="https://www.linkedin.com/in/aastha-katharotiya-104866295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                                     <button>
                                         <i class="fa-brands fa-linkedin-in"></i>
                                     </button>
                                 </a>
 
-                                <a href="https://in.pinterest.com/">
+                                <a href="https://pin.it/11APntLaF">
                                     <button>
                                         <i class="fa-brands fa-pinterest-p"></i>
                                     </button>
