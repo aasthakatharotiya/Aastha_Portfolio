@@ -327,8 +327,10 @@ export default function Portfolio() {
                 <header>
                     <div className="header_div">
                         <div className="logo">
-                            {/* <h1>Aastha</h1> */}
-                            {/* <img src="img/Logo.png" alt="" /> */}
+                            <h1>Portfolio.</h1>
+                            {/* <img src="Logo.png" alt="" /> */}
+
+                            {/* <img src="Logo_main.png" alt="" /> */}
                         </div>
 
                         <div className="navbar">
@@ -379,7 +381,7 @@ export default function Portfolio() {
                 </div> */}
 
 
-                <div id='home_section' data-section className="head">
+                <div id='home_section' data-section className="head" style={{backgroundImage: "url('Aastha_head.jpeg')", backgroundSize: "70% 100%", backgroundRepeat : "no-repeat", backgroundPosition: "100% 100%"}}>
                     {/* <div className="head_rotate_1">
                         <div className="head_rotate_2">
                             <div className="head_rotate_text">

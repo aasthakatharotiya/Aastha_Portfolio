@@ -59,9 +59,18 @@ header {
       /* border: 2px solid; */
       width: 15%;
       height: 50px;
-      background-image: url('Logo.png');
+      /* background-image: url('Logo.png');
       background-size: 100% 100%;
-      background-position: center;
+      background-position: center; */
+
+      /* img{
+        height: 200%;
+        width: 100%;
+      } */
+
+      h1{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
     }
 
     .navbar {
@@ -216,11 +225,11 @@ header {
   /* border: 2px solid; */
   overflow: hidden;
   height: 700px;
-  background-image: url('Aastha_head.jpeg');
   /* background-image: url('Aastha_Header.png'); */
+  /* background-image: url('Aastha_head.jpeg');
   background-repeat: no-repeat;
   background-size: 70% 100%;
-  background-position: 100% 100%;
+  background-position: 100% 100%; */
 
   display: flex;
   justify-content: flex-start;
