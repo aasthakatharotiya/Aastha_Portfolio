@@ -133,7 +133,7 @@ header {
     }
   }
 
-  @media screen and (min-width: 400px) and (max-width: 992px) {
+  @media screen and (min-width: 0px) and (max-width: 992px) {
     .header_div {
       .navbar {
         display: none;
@@ -303,7 +303,7 @@ header {
     }
   }
 
-  @media screen and (min-width: 400px) and (max-width: 800px) {
+  @media screen and (min-width: 0px) and (max-width: 800px) {
     .head_content {
       width: 100%;
       margin-left: -400px;
@@ -688,7 +688,7 @@ header {
     }
   }
 
-  @media screen and (min-width: 400px) and (max-width: 992px) {
+  @media screen and (min-width: 0px) and (max-width: 992px) {
     .about_div {
       width: 100%;
       display: flex;
@@ -1315,7 +1315,7 @@ footer {
     }
   }
 
-  @media screen and (min-width: 400px) and (max-width: 992px) {
+  @media screen and (min-width: 0px) and (max-width: 992px) {
     .footer_div {
       width: 90%;
       display: flex;

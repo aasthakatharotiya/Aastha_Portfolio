@@ -163,7 +163,7 @@ export default function Portfolio() {
                 clickable: true,
             },
             breakpoints: {
-                400: {
+                0: {
                     slidesPerView: 1,
                     spaceBetween: 20,
                 },
